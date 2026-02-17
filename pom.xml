@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>orchestration-service</module>
         <module>common</module>
         <module>payment-service</module>
         <module>onchain-service</module>

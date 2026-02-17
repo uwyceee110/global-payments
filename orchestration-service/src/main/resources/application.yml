@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+payment:
+  base-url: http://localhost:8081
+
+onchain:
+  base-url: http://localhost:8082
