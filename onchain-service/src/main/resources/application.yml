@@ -1,0 +1,6 @@
+server:
+  port: 8082
+
+solana:
+  rpc-url: https://api.mainnet-beta.solana.com
+  usdc-mint: EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
