@@ -1,0 +1,25 @@
+@startuml
+
+package "Web2 Services" {
+  [API Gateway]
+  [Payment Service]
+  [Account Service]
+  [Settlement Service]
+  [Risk Service]
+  [FX Service]
+  [Stripe Webhook Listener]
+}
+
+package "Web3 Services" {
+  [Onchain Service]
+  [USDC Contract]
+  [Blockchain RPC]
+}
+
+[API Gateway] --> [Payment Service]
+[Payment Service] --> [Stripe Webhook Listener]
+[Stripe Webhook Listener] --> [Onchain Service]
+[Onchain Service] --> [USDC Contract]
+[USDC Contract] --> [Blockchain RPC]
+
+@enduml

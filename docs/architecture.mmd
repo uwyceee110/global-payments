@@ -1,0 +1,26 @@
+flowchart TD
+
+    subgraph Web2
+        A[API Gateway]
+        B[Payment Service]
+        C[Account Service]
+        D[Settlement Service]
+        E[Risk Service]
+        F[FX Service]
+        J[Stripe Webhook Listener]
+    end
+
+    subgraph Web3
+        G[Onchain Service]
+        H[USDC Contract]
+        I[Blockchain RPC]
+    end
+
+    A --> B
+    B --> J
+    J --> G
+    G --> H
+    H --> I
+    B --> D
+    B --> E
+    B --> F
